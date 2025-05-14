@@ -1,0 +1,70 @@
+/* Navbar.css */
+.navbar {
+  background-color: #111;
+  color: white;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.brand {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: gray;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: #d81818;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    color: white;
+  }
+  .menu.open {
+    display: flex;
+  }
+}
